@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+    <a href="{% url 'app:week_with_schedule' week_previous.year week_previous.month  week_previous.day %}">前週</a>
+    {{ week_first | date:"Y年m月d日" }}〜{{ week_last | date:"Y年m月d日" }}
+    <a href="{% url 'app:week_with_schedule' week_next.year week_next.month  week_next.day %}">次週</a>
+
+      <table class="table table-bordered">
+        <tbody>
+        {% for week_name, day, schedules in week_row %}
+            <tr>
+                <td>
+                    {% if week_first.month != day.month %}
+                        {{ day | date:"m/d" }}
+                    {% else %}
+                        {{ day.day }}
+                    {% endif %}
+                    ({{ week_name }})
+                </td>
+
+                <td>
+                    {% for s in schedules %}
+                        {{ s.start_time }} - {{ s.end_time }}<br>
+                        {{ s.summary }}<br>
+                        {{ s.description | linebreaks }}
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
