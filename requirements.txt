@@ -1,0 +1,11 @@
+django
+gunicorn
+whitenoise
+dj-database-url
+django-anymail[mailgun]
+pillow
+python-dotenv
+psycopg2-binary
+mysqlclient
+django-bootstrap-datepicker-plus
+django-bootstrap4
