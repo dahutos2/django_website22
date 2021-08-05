@@ -25,7 +25,7 @@ SECRET_KEY = 'edoabcp7o$oe!&5ka9(wd72@^a*8$a$f(^-1)dv!p2!zbl6sue'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['schedule-calendar-dahutos.herokuapp.com']
 
 
 # Application definition
