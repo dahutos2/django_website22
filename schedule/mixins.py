@@ -1,5 +1,5 @@
 import datetime
-import calendar
+from calendar import Calendar
 from collections import deque
 
 
@@ -16,7 +16,7 @@ class BaseCalendarMixin:
         火曜日から表示したい(first_weekday=1)、といったケースに対応するためのセットアップ処理です。
 
         """
-        self._calendar = calendar.Calendar(self.first_weekday)
+        self._calendar = Calendar(self.first_weekday)
 
     def get_week_names(self):
         """first_weekday(最初に表示される曜日)にあわせて、week_namesをシフトする"""

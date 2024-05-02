@@ -1,9 +1,9 @@
 {% extends 'calendar/base.html' %}
 {% block navbar %}{% endblock %}
 {% block content %}
-<a href="{% url 'calendar' week_previous.year week_previous.month  week_previous.day %}">前週</a>
+<a href="{% url 'schedule' week_previous.year week_previous.month  week_previous.day %}">前週</a>
 {{ week_first | date:"Y年m月d日" }}〜{{ week_last | date:"Y年m月d日" }}
-<a href="{% url 'calendar' week_next.year week_next.month  week_next.day %}">次週</a>
+<a href="{% url 'schedule' week_next.year week_next.month  week_next.day %}">次週</a>
 
 <table class="table" style="table-layout: fixed;">
     <tbody>
