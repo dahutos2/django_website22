@@ -12,9 +12,14 @@
     <title>カレンダー</title>
 </head>
 <body>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">一覧</a>
+                <a class="navbar-brand" href="/">詳細</a>
+        </nav>
 <div class="container" mt-3>
-    {% block content %}{% endblock %}
+    {% block content %}
+        <p>※コンテンツがありません。</p>
+    {% endblock %}
 </div>
 
 

@@ -1,1 +1,1 @@
-web: gunicorn pj_schedule.wsgi
+web: gunicorn config.wsgi
