@@ -1,8 +1,8 @@
-{% extends 'app/base.html' %}
+{% extends 'calendar/base.html' %}
 {% block content %}
     <div class="row">
         <div class="col-md-3">
-            {% include 'app/includes/month.html' %}
+            {% include 'calendar/includes/month.html' %}
             <hr>
             <form action="" method="POST">
                 {{ form.non_field_errors }}
@@ -21,7 +21,7 @@
             </form>
         </div>
         <div class="col-md-9">
-            {% include 'app/includes/week.html' %}
+            {% include 'calendar/includes/week.html' %}
         </div>
     </div>
 {% endblock %}
